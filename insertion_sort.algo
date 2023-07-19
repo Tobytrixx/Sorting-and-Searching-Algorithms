@@ -1,0 +1,21 @@
+ALGORITHM insertionSort
+//Declare variables for arrays and counters
+VAR
+    i,j,queue,n : INTEGER;
+    arr : ARRAY_OF INTEGER[10];
+BEGIN
+//assign array length to n
+    n := arr.length
+    FOR i FROM 1 TO n-1 STEP 1  DO
+        queue := arr[i]; 
+//Update counter
+        j := i - 1;
+// Shift elements of array[0 to i-1] which are  greater than queue, to one step ahead of their current position
+        WHILE (j >= 0 && arr[j] > queue) DO
+            arr[j + 1] = arr[j]; 
+//Update Counter
+            j = j - 1;
+        END_WHILE
+        arr[j + 1] = queue;
+    END_FOR
+END
