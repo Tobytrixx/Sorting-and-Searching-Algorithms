@@ -1,4 +1,4 @@
-ALGORITHM insertionSort
+ALGORITHM Insertion_Sort
 //Declare variables for arrays and counters
 VAR
     i,j,queue,n : INTEGER;
